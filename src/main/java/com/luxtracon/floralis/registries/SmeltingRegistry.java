@@ -28,7 +28,7 @@ public class SmeltingRegistry
         GameRegistry.addSmelting(ItemInit.petalWhite, new ItemStack(ItemInit.dyeWhite), 0.2F);
         GameRegistry.addSmelting(ItemInit.petalYellow, new ItemStack(ItemInit.dyeYellow), 0.2F);
 
-        if(Config.potload)
+        if(Config.potload && Config.coloredclay)
         {
             GameRegistry.addSmelting(ItemInit.potUnfiredBlack, new ItemStack(ItemInit.potFiredBlack), 0.2F);
             GameRegistry.addSmelting(ItemInit.potUnfiredBlue, new ItemStack(ItemInit.potFiredBlue), 0.2F);

@@ -171,27 +171,30 @@ public class Tab extends CreativeTabs
                 ItemInit.dyeBlack
             ));
 
-        getItem.addAll(Arrays.asList
-            (
-                ItemInit.clayWhite,
-                ItemInit.clayOrange,
-                ItemInit.clayMagenta,
-                ItemInit.clayLightBlue,
-                ItemInit.clayYellow,
-                ItemInit.clayLime,
-                ItemInit.clayPink,
-                ItemInit.clayGray,
-                ItemInit.clayLightGray,
-                ItemInit.clayCyan,
-                ItemInit.clayPurple,
-                ItemInit.clayBlue,
-                ItemInit.clayBrown,
-                ItemInit.clayGreen,
-                ItemInit.clayRed,
-                ItemInit.clayBlack
-            ));
+        if(Config.coloredclay)
+        {
+            getItem.addAll(Arrays.asList
+                (
+                    ItemInit.clayWhite,
+                    ItemInit.clayOrange,
+                    ItemInit.clayMagenta,
+                    ItemInit.clayLightBlue,
+                    ItemInit.clayYellow,
+                    ItemInit.clayLime,
+                    ItemInit.clayPink,
+                    ItemInit.clayGray,
+                    ItemInit.clayLightGray,
+                    ItemInit.clayCyan,
+                    ItemInit.clayPurple,
+                    ItemInit.clayBlue,
+                    ItemInit.clayBrown,
+                    ItemInit.clayGreen,
+                    ItemInit.clayRed,
+                    ItemInit.clayBlack
+                ));
+        }
 
-        if(Config.potload)
+        if(Config.potload && Config.coloredclay)
         {
             getItem.addAll(Arrays.asList
                 (
@@ -212,7 +215,10 @@ public class Tab extends CreativeTabs
                     ItemInit.potUnfiredRed,
                     ItemInit.potUnfiredBlack
                 ));
+        }
 
+        if(Config.potload)
+        {
             getItem.addAll(Arrays.asList
                 (
                     ItemInit.potFiredWhite,
@@ -294,25 +300,28 @@ public class Tab extends CreativeTabs
                 Item.getItemFromBlock(BlockInit.blockDyeBlack)
             ));
 
-        getItem.addAll(Arrays.asList
-            (
-                Item.getItemFromBlock(BlockInit.blockClayWhite),
-                Item.getItemFromBlock(BlockInit.blockClayOrange),
-                Item.getItemFromBlock(BlockInit.blockClayMagenta),
-                Item.getItemFromBlock(BlockInit.blockClayLightBlue),
-                Item.getItemFromBlock(BlockInit.blockClayYellow),
-                Item.getItemFromBlock(BlockInit.blockClayLime),
-                Item.getItemFromBlock(BlockInit.blockClayPink),
-                Item.getItemFromBlock(BlockInit.blockClayGray),
-                Item.getItemFromBlock(BlockInit.blockClayLightGray),
-                Item.getItemFromBlock(BlockInit.blockClayCyan),
-                Item.getItemFromBlock(BlockInit.blockClayPurple),
-                Item.getItemFromBlock(BlockInit.blockClayBlue),
-                Item.getItemFromBlock(BlockInit.blockClayBrown),
-                Item.getItemFromBlock(BlockInit.blockClayGreen),
-                Item.getItemFromBlock(BlockInit.blockClayRed),
-                Item.getItemFromBlock(BlockInit.blockClayBlack)
-            ));
+        if(Config.coloredclay)
+        {
+            getItem.addAll(Arrays.asList
+                (
+                    Item.getItemFromBlock(BlockInit.blockClayWhite),
+                    Item.getItemFromBlock(BlockInit.blockClayOrange),
+                    Item.getItemFromBlock(BlockInit.blockClayMagenta),
+                    Item.getItemFromBlock(BlockInit.blockClayLightBlue),
+                    Item.getItemFromBlock(BlockInit.blockClayYellow),
+                    Item.getItemFromBlock(BlockInit.blockClayLime),
+                    Item.getItemFromBlock(BlockInit.blockClayPink),
+                    Item.getItemFromBlock(BlockInit.blockClayGray),
+                    Item.getItemFromBlock(BlockInit.blockClayLightGray),
+                    Item.getItemFromBlock(BlockInit.blockClayCyan),
+                    Item.getItemFromBlock(BlockInit.blockClayPurple),
+                    Item.getItemFromBlock(BlockInit.blockClayBlue),
+                    Item.getItemFromBlock(BlockInit.blockClayBrown),
+                    Item.getItemFromBlock(BlockInit.blockClayGreen),
+                    Item.getItemFromBlock(BlockInit.blockClayRed),
+                    Item.getItemFromBlock(BlockInit.blockClayBlack)
+                ));
+        }
 
         itemStack.clear();
 

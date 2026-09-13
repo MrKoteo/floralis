@@ -21,6 +21,7 @@ public class Config
 
     public static boolean cosmeticblocks;
     public static boolean potload;
+    public static boolean coloredclay;
     public static boolean cactitrades;
     public static boolean flowertrades;
     public static boolean ffcompat;
@@ -46,6 +47,7 @@ public class Config
 
         cosmeticblocks = configuration.get(Configuration.CATEGORY_GENERAL, "Load Floralis cosmetic blocks", true, "Whether to load Floralis cosmetic blocks or not. Default: true").getBoolean(true);
         potload = configuration.get(Configuration.CATEGORY_GENERAL, "Load Floralis flower pots", true, "Whether to load Floralis flower pots or not. Default: true").getBoolean(true);
+        coloredclay = configuration.get(Configuration.CATEGORY_GENERAL, "Load Floralis colored clay", true, "Whether to load Floralis colored clay or not. Default: true").getBoolean(true);
         cactitrades = configuration.get(Configuration.CATEGORY_GENERAL, "Load Floralis tradeable cactiseeds", true, "Whether to load Floralis tradeable cactiseeds or not. Default: true").getBoolean(true);
         flowertrades = configuration.get(Configuration.CATEGORY_GENERAL, "Load Floralis tradeable flowerseeds", true, "Whether to load Floralis tradeable flowerseeds or not. Default: true").getBoolean(true);
         ffcompat = configuration.get(Configuration.CATEGORY_GENERAL, "Load Forestry Farming compat", true, "Whether to load Floralis and Forestry Farming compat or not. Default: true").getBoolean(true);

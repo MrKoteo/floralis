@@ -529,7 +529,10 @@ public class BlockInit
             event.getRegistry().registerAll(blockDyeGreen);
             event.getRegistry().registerAll(blockDyeRed);
             event.getRegistry().registerAll(blockDyeBlack);
+        }
 
+        if(Config.coloredclay)
+        {
             event.getRegistry().registerAll(blockClayWhite);
             event.getRegistry().registerAll(blockClayOrange);
             event.getRegistry().registerAll(blockClayMagenta);
@@ -641,7 +644,10 @@ public class BlockInit
             event.getRegistry().registerAll(new ItemBlock(blockDyeGreen).setRegistryName(Objects.requireNonNull(blockDyeGreen.getRegistryName())));
             event.getRegistry().registerAll(new ItemBlock(blockDyeRed).setRegistryName(Objects.requireNonNull(blockDyeRed.getRegistryName())));
             event.getRegistry().registerAll(new ItemBlock(blockDyeBlack).setRegistryName(Objects.requireNonNull(blockDyeBlack.getRegistryName())));
+        }
 
+        if(Config.coloredclay)
+        {
             event.getRegistry().registerAll(new ItemBlock(blockClayWhite).setRegistryName(Objects.requireNonNull(blockClayWhite.getRegistryName())));
             event.getRegistry().registerAll(new ItemBlock(blockClayOrange).setRegistryName(Objects.requireNonNull(blockClayOrange.getRegistryName())));
             event.getRegistry().registerAll(new ItemBlock(blockClayMagenta).setRegistryName(Objects.requireNonNull(blockClayMagenta.getRegistryName())));
@@ -753,7 +759,10 @@ public class BlockInit
             registerRender(Item.getItemFromBlock(blockDyeGreen));
             registerRender(Item.getItemFromBlock(blockDyeRed));
             registerRender(Item.getItemFromBlock(blockDyeBlack));
+        }
 
+        if(Config.coloredclay)
+        {
             registerRender(Item.getItemFromBlock(blockClayWhite));
             registerRender(Item.getItemFromBlock(blockClayOrange));
             registerRender(Item.getItemFromBlock(blockClayMagenta));

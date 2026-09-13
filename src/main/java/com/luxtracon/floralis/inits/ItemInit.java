@@ -386,24 +386,27 @@ public class ItemInit
 		event.getRegistry().registerAll(dyeRed);
 		event.getRegistry().registerAll(dyeBlack);
 
-		event.getRegistry().registerAll(clayWhite);
-		event.getRegistry().registerAll(clayOrange);
-		event.getRegistry().registerAll(clayMagenta);
-		event.getRegistry().registerAll(clayLightBlue);
-		event.getRegistry().registerAll(clayYellow);
-		event.getRegistry().registerAll(clayLime);
-		event.getRegistry().registerAll(clayPink);
-		event.getRegistry().registerAll(clayGray);
-		event.getRegistry().registerAll(clayLightGray);
-		event.getRegistry().registerAll(clayCyan);
-		event.getRegistry().registerAll(clayPurple);
-		event.getRegistry().registerAll(clayBlue);
-		event.getRegistry().registerAll(clayBrown);
-		event.getRegistry().registerAll(clayGreen);
-		event.getRegistry().registerAll(clayRed);
-		event.getRegistry().registerAll(clayBlack);
+		if(Config.coloredclay)
+		{
+			event.getRegistry().registerAll(clayWhite);
+			event.getRegistry().registerAll(clayOrange);
+			event.getRegistry().registerAll(clayMagenta);
+			event.getRegistry().registerAll(clayLightBlue);
+			event.getRegistry().registerAll(clayYellow);
+			event.getRegistry().registerAll(clayLime);
+			event.getRegistry().registerAll(clayPink);
+			event.getRegistry().registerAll(clayGray);
+			event.getRegistry().registerAll(clayLightGray);
+			event.getRegistry().registerAll(clayCyan);
+			event.getRegistry().registerAll(clayPurple);
+			event.getRegistry().registerAll(clayBlue);
+			event.getRegistry().registerAll(clayBrown);
+			event.getRegistry().registerAll(clayGreen);
+			event.getRegistry().registerAll(clayRed);
+			event.getRegistry().registerAll(clayBlack);
+		}
 
-		if(Config.potload)
+		if(Config.potload && Config.coloredclay)
 		{
 			event.getRegistry().registerAll(potUnfiredWhite);
 			event.getRegistry().registerAll(potUnfiredOrange);
@@ -421,7 +424,10 @@ public class ItemInit
 			event.getRegistry().registerAll(potUnfiredGreen);
 			event.getRegistry().registerAll(potUnfiredRed);
 			event.getRegistry().registerAll(potUnfiredBlack);
+		}
 
+		if(Config.potload)
+		{
 			event.getRegistry().registerAll(potFiredWhite);
 			event.getRegistry().registerAll(potFiredOrange);
 			event.getRegistry().registerAll(potFiredMagenta);
@@ -529,24 +535,27 @@ public class ItemInit
 		registerRender(dyeRed);
 		registerRender(dyeBlack);
 
-		registerRender(clayWhite);
-		registerRender(clayOrange);
-		registerRender(clayMagenta);
-		registerRender(clayLightBlue);
-		registerRender(clayYellow);
-		registerRender(clayLime);
-		registerRender(clayPink);
-		registerRender(clayGray);
-		registerRender(clayLightGray);
-		registerRender(clayCyan);
-		registerRender(clayPurple);
-		registerRender(clayBlue);
-		registerRender(clayBrown);
-		registerRender(clayGreen);
-		registerRender(clayRed);
-		registerRender(clayBlack);
+		if(Config.coloredclay)
+		{
+			registerRender(clayWhite);
+			registerRender(clayOrange);
+			registerRender(clayMagenta);
+			registerRender(clayLightBlue);
+			registerRender(clayYellow);
+			registerRender(clayLime);
+			registerRender(clayPink);
+			registerRender(clayGray);
+			registerRender(clayLightGray);
+			registerRender(clayCyan);
+			registerRender(clayPurple);
+			registerRender(clayBlue);
+			registerRender(clayBrown);
+			registerRender(clayGreen);
+			registerRender(clayRed);
+			registerRender(clayBlack);
+		}
 
-		if(Config.potload)
+		if(Config.potload && Config.coloredclay)
 		{
 			registerRender(potUnfiredWhite);
 			registerRender(potUnfiredOrange);
@@ -564,7 +573,10 @@ public class ItemInit
 			registerRender(potUnfiredGreen);
 			registerRender(potUnfiredRed);
 			registerRender(potUnfiredBlack);
+		}
 
+		if(Config.potload)
+		{
 			registerRender(potFiredWhite);
 			registerRender(potFiredOrange);
 			registerRender(potFiredMagenta);

@@ -2,6 +2,7 @@ package com.luxtracon.floralis.inits;
 
 import com.luxtracon.floralis.Main;
 import com.luxtracon.floralis.items.*;
+import com.luxtracon.floralis.utilities.Config;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -402,39 +403,42 @@ public class ItemInit
 		event.getRegistry().registerAll(clayRed);
 		event.getRegistry().registerAll(clayBlack);
 
-		event.getRegistry().registerAll(potUnfiredWhite);
-		event.getRegistry().registerAll(potUnfiredOrange);
-		event.getRegistry().registerAll(potUnfiredMagenta);
-		event.getRegistry().registerAll(potUnfiredLightBlue);
-		event.getRegistry().registerAll(potUnfiredYellow);
-		event.getRegistry().registerAll(potUnfiredLime);
-		event.getRegistry().registerAll(potUnfiredPink);
-		event.getRegistry().registerAll(potUnfiredGray);
-		event.getRegistry().registerAll(potUnfiredLightGray);
-		event.getRegistry().registerAll(potUnfiredCyan);
-		event.getRegistry().registerAll(potUnfiredPurple);
-		event.getRegistry().registerAll(potUnfiredBlue);
-		event.getRegistry().registerAll(potUnfiredBrown);
-		event.getRegistry().registerAll(potUnfiredGreen);
-		event.getRegistry().registerAll(potUnfiredRed);
-		event.getRegistry().registerAll(potUnfiredBlack);
+		if(Config.potload)
+		{
+			event.getRegistry().registerAll(potUnfiredWhite);
+			event.getRegistry().registerAll(potUnfiredOrange);
+			event.getRegistry().registerAll(potUnfiredMagenta);
+			event.getRegistry().registerAll(potUnfiredLightBlue);
+			event.getRegistry().registerAll(potUnfiredYellow);
+			event.getRegistry().registerAll(potUnfiredLime);
+			event.getRegistry().registerAll(potUnfiredPink);
+			event.getRegistry().registerAll(potUnfiredGray);
+			event.getRegistry().registerAll(potUnfiredLightGray);
+			event.getRegistry().registerAll(potUnfiredCyan);
+			event.getRegistry().registerAll(potUnfiredPurple);
+			event.getRegistry().registerAll(potUnfiredBlue);
+			event.getRegistry().registerAll(potUnfiredBrown);
+			event.getRegistry().registerAll(potUnfiredGreen);
+			event.getRegistry().registerAll(potUnfiredRed);
+			event.getRegistry().registerAll(potUnfiredBlack);
 
-		event.getRegistry().registerAll(potFiredWhite);
-		event.getRegistry().registerAll(potFiredOrange);
-		event.getRegistry().registerAll(potFiredMagenta);
-		event.getRegistry().registerAll(potFiredLightBlue);
-		event.getRegistry().registerAll(potFiredYellow);
-		event.getRegistry().registerAll(potFiredLime);
-		event.getRegistry().registerAll(potFiredPink);
-		event.getRegistry().registerAll(potFiredGray);
-		event.getRegistry().registerAll(potFiredLightGray);
-		event.getRegistry().registerAll(potFiredCyan);
-		event.getRegistry().registerAll(potFiredPurple);
-		event.getRegistry().registerAll(potFiredBlue);
-		event.getRegistry().registerAll(potFiredBrown);
-		event.getRegistry().registerAll(potFiredGreen);
-		event.getRegistry().registerAll(potFiredRed);
-		event.getRegistry().registerAll(potFiredBlack);
+			event.getRegistry().registerAll(potFiredWhite);
+			event.getRegistry().registerAll(potFiredOrange);
+			event.getRegistry().registerAll(potFiredMagenta);
+			event.getRegistry().registerAll(potFiredLightBlue);
+			event.getRegistry().registerAll(potFiredYellow);
+			event.getRegistry().registerAll(potFiredLime);
+			event.getRegistry().registerAll(potFiredPink);
+			event.getRegistry().registerAll(potFiredGray);
+			event.getRegistry().registerAll(potFiredLightGray);
+			event.getRegistry().registerAll(potFiredCyan);
+			event.getRegistry().registerAll(potFiredPurple);
+			event.getRegistry().registerAll(potFiredBlue);
+			event.getRegistry().registerAll(potFiredBrown);
+			event.getRegistry().registerAll(potFiredGreen);
+			event.getRegistry().registerAll(potFiredRed);
+			event.getRegistry().registerAll(potFiredBlack);
+		}
 	}
 	
 	@SubscribeEvent
@@ -542,38 +546,41 @@ public class ItemInit
 		registerRender(clayRed);
 		registerRender(clayBlack);
 
-		registerRender(potUnfiredWhite);
-		registerRender(potUnfiredOrange);
-		registerRender(potUnfiredMagenta);
-		registerRender(potUnfiredLightBlue);
-		registerRender(potUnfiredYellow);
-		registerRender(potUnfiredLime);
-		registerRender(potUnfiredPink);
-		registerRender(potUnfiredGray);
-		registerRender(potUnfiredLightGray);
-		registerRender(potUnfiredCyan);
-		registerRender(potUnfiredPurple);
-		registerRender(potUnfiredBlue);
-		registerRender(potUnfiredBrown);
-		registerRender(potUnfiredGreen);
-		registerRender(potUnfiredRed);
-		registerRender(potUnfiredBlack);
+		if(Config.potload)
+		{
+			registerRender(potUnfiredWhite);
+			registerRender(potUnfiredOrange);
+			registerRender(potUnfiredMagenta);
+			registerRender(potUnfiredLightBlue);
+			registerRender(potUnfiredYellow);
+			registerRender(potUnfiredLime);
+			registerRender(potUnfiredPink);
+			registerRender(potUnfiredGray);
+			registerRender(potUnfiredLightGray);
+			registerRender(potUnfiredCyan);
+			registerRender(potUnfiredPurple);
+			registerRender(potUnfiredBlue);
+			registerRender(potUnfiredBrown);
+			registerRender(potUnfiredGreen);
+			registerRender(potUnfiredRed);
+			registerRender(potUnfiredBlack);
 
-		registerRender(potFiredWhite);
-		registerRender(potFiredOrange);
-		registerRender(potFiredMagenta);
-		registerRender(potFiredLightBlue);
-		registerRender(potFiredYellow);
-		registerRender(potFiredLime);
-		registerRender(potFiredPink);
-		registerRender(potFiredGray);
-		registerRender(potFiredLightGray);
-		registerRender(potFiredCyan);
-		registerRender(potFiredPurple);
-		registerRender(potFiredBlue);
-		registerRender(potFiredBrown);
-		registerRender(potFiredGreen);
-		registerRender(potFiredRed);
-		registerRender(potFiredBlack);
+			registerRender(potFiredWhite);
+			registerRender(potFiredOrange);
+			registerRender(potFiredMagenta);
+			registerRender(potFiredLightBlue);
+			registerRender(potFiredYellow);
+			registerRender(potFiredLime);
+			registerRender(potFiredPink);
+			registerRender(potFiredGray);
+			registerRender(potFiredLightGray);
+			registerRender(potFiredCyan);
+			registerRender(potFiredPurple);
+			registerRender(potFiredBlue);
+			registerRender(potFiredBrown);
+			registerRender(potFiredGreen);
+			registerRender(potFiredRed);
+			registerRender(potFiredBlack);
+		}
 	}
 }

@@ -6,6 +6,7 @@ import com.luxtracon.floralis.utilities.Config;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.DimensionType;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -206,7 +207,7 @@ public class WorldgenCactus implements IWorldGenerator
         int posX = chunkX * 16 + 8;
         int posZ = chunkZ * 16 + 8;
 
-        if (world.provider.getDimension() == 0 && world.getWorldType() != WorldType.FLAT)
+        if (world.getWorldType() != WorldType.FLAT)
         {
             for (Block[] group : GROUPS)
             {
@@ -218,6 +219,11 @@ public class WorldgenCactus implements IWorldGenerator
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
     {
+        if (world.provider.getDimensionType() != DimensionType.OVERWORLD)
+        {
+            return;
+        }
+
         this.groups(random, chunkX, chunkZ, world);
     }
 }

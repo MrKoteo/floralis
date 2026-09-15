@@ -19,7 +19,7 @@ public class StructureFieldFlower extends StructureVillagePieces.Village
 {
     private BlockCropFlower crop;
 
-    protected StructureFieldFlower() {}
+    public StructureFieldFlower() {}
 
     public StructureFieldFlower(StructureVillagePieces.Start start, int type, Random random, StructureBoundingBox box, EnumFacing facing)
     {

@@ -19,7 +19,7 @@ public class StructureFieldCactus extends StructureVillagePieces.Village
 {
     private BlockCropCactus crop;
 
-    protected StructureFieldCactus() {}
+    public StructureFieldCactus() {}
 
     public StructureFieldCactus(StructureVillagePieces.Start start, int type, Random random, StructureBoundingBox box, EnumFacing facing)
     {

@@ -17,7 +17,9 @@ import java.util.Random;
 
 public class StructureFieldCactus extends StructureVillagePieces.Village
 {
-    private final BlockCropCactus crop;
+    private BlockCropCactus crop;
+
+    protected StructureFieldCactus() {}
 
     public StructureFieldCactus(StructureVillagePieces.Start start, int type, Random random, StructureBoundingBox box, EnumFacing facing)
     {

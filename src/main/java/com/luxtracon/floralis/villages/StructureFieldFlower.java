@@ -17,7 +17,9 @@ import net.minecraft.world.gen.structure.StructureVillagePieces;
 
 public class StructureFieldFlower extends StructureVillagePieces.Village
 {
-    private final BlockCropFlower crop;
+    private BlockCropFlower crop;
+
+    protected StructureFieldFlower() {}
 
     public StructureFieldFlower(StructureVillagePieces.Start start, int type, Random random, StructureBoundingBox box, EnumFacing facing)
     {
